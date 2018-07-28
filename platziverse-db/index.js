@@ -1,4 +1,5 @@
 'use strict'
+
 const setupDatabase = require('./lib/db')
 const setupAgentModel = require('./models/agent')
 const setupMetricModel = require('./models/metric')
@@ -8,7 +9,7 @@ const defaults = require('defaults')
 module.exports = async function (config) {
   config = defaults(config, {
     dialect: 'sqlite',
-    pools: {
+    pool: {
       max: 10,
       min: 0,
       idle: 10000
@@ -17,6 +18,7 @@ module.exports = async function (config) {
       raw: true
     }
   })
+
   const sequelize = setupDatabase(config)
   const AgentModel = setupAgentModel(config)
   const MetricModel = setupMetricModel(config)
@@ -27,7 +29,7 @@ module.exports = async function (config) {
   await sequelize.authenticate()
 
   if (config.setup) {
-    await sequelize.sync({force: true})
+    await sequelize.sync({ force: true })
   }
 
   const Agent = setupAgent(AgentModel)
