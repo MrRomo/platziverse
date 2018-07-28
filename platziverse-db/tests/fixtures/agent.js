@@ -24,11 +24,9 @@ function extend (obj, values) {
   return Object.assign(clone, values)
 }
 
-module.exports = {
-  single: agent,
-  all: agents,
-  connected: agents.filter(a => a.connected),
-  platzi: agents.filter(a => a.username === 'platzi'),
-  byUuid: id => agents.filter(a => a.uuid === id).shift(),
-  byId: id => agents.filter(a => a.id === id).shift()
-}
+export const single = agent;
+export const all = agents;
+export const connected = agents.filter(a => a.connected);
+export const platzi = agents.filter(a => a.username === 'platzi');
+export function byUuid(id) { return agents.filter(a => a.uuid === id).shift(); }
+export function byId(id) { return agents.filter(a => a.id === id).shift(); }
