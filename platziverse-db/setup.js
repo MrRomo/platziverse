@@ -8,22 +8,35 @@ const db = require('./')
 const prompt = inquirer.createPromptModule()
 
 async function setup () {
-  const answer = await prompt([
-    {
-      type: 'confirm',
-      name: 'setup',
-      message: 'This will destroy your database, are you sure?'
-    }
-  ])
+  let flag = false
 
-  if (!answer.setup) {
-    return console.log('Nothing happened :)')
+  process.argv.forEach(e => {
+    if (e === '--yes') {
+      flag = true
+    }
+  })
+
+  if (flag === false) {
+    // Pregunta en la consola
+    const answer = await prompt([
+      {
+        type: 'confirm',
+        name: 'setup',
+        message: 'This will destroy your database, are you sure?'
+      }
+    ])
+
+    // Si la respuesta es falsa (es negativa), no pasa nada
+    // Si la respuesta es verdadera (es positia), re-crea la DB
+    if (!answer.setup) {
+      returnconsole.log('Nothing happended :)')
+    }
   }
 
   const config = {
     database: process.env.DB_NAME || 'platziverse',
-    username: process.env.DB_USER || 'platzi',
-    password: process.env.DB_PASS || 'platzi',
+    username: process.env.DB_USER || 'mrromo',
+    password: process.env.DB_PASS || 'mrromo',
     host: process.env.DB_HOST || 'localhost',
     dialect: 'postgres',
     logging: s => debug(s),

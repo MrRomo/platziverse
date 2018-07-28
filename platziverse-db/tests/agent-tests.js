@@ -1,10 +1,10 @@
 'use strict'
 
-import test from 'ava';
+import test from 'ava'
 import sinon from 'sinon'
-import proxyquire from 'proxyquire';
+import proxyquire from 'proxyquire'
 
-import agentFixtures from './fixtures/agent';
+import agentFixtures from './fixtures/agent'
 
 let config = {
   logging () {}
@@ -50,7 +50,7 @@ test.beforeEach(async () => {
     hasMany: sandbox.spy()
   }
 
-// Model create Stub
+  // Model create Stub
   AgentStub.create = sandbox.stub()
   AgentStub.create.withArgs(newAgent).returns(Promise.resolve({
     toJSON () { return newAgent }
