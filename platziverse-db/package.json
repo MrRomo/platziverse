@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platzi/platziverse.git"
+    "url": "git+ssh://git@github.com/MrRomo/platziverse.git"
   },
   "author": "Julian Duque <julianduquej@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/platzi/platziverse/issues"
+    "url": "https://github.com/MrRomo/platziverse/issues"
   },
-  "homepage": "https://github.com/platzi/platziverse#readme",
+  "homepage": "https://github.com/MrRomo/platziverse#readme",
   "devDependencies": {
     "ava": "^0.21.0",
     "nyc": "^11.1.0",

@@ -1,0 +1,20 @@
+{
+  "name": "platziverse-agent",
+  "version": "1.0.0",
+  "description": "A simple IoT platform - agent",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrRomo/platziverse.git"
+  },
+  "author": "Ricardo <jricardoromo21@gmail.com> (https://twitter.com/JRicardo_Romo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrRomo/platziverse/issues"
+  },
+  "homepage": "https://github.com/MrRomo/platziverse#readme"
+}
