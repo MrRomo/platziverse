@@ -5,7 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/MrRomo/platziverse/issues"
   },
-  "homepage": "https://github.com/MrRomo/platziverse#readme"
+  "homepage": "https://github.com/MrRomo/platziverse#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "default": "^0.1.1",
+    "mqtt": "^2.18.3",
+    "uuid": "^3.3.2"
+  }
 }
