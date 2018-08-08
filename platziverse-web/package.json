@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platzi/platziverse.git"
+    "url": "git+https://github.com/mrromo/platziverse.git"
   },
-  "author": "Julian Duque <julianduquej@gmail.com>",
+  "author": "Ricardo <jricardoromo21@gmail.com> (https://twitter.com/JRicardo_Romo)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/platzi/platziverse/issues"
+    "url": "https://github.com/mrromo/platziverse/issues"
   },
-  "homepage": "https://github.com/platzi/platziverse#readme",
+  "homepage": "https://github.com/mrromo/platziverse#readme",
   "browserify": {
     "transform": [
       [
