@@ -103,10 +103,10 @@ module.exports = {
           const labels = this.datacollection.labels
           const data = this.datacollection.datasets[0].data
 
-          // Remove first element if length > 20
+          // Remove first element if length > 40
           const length = labels.length || data.length
 
-          if (length >= 20) {
+          if (length >= 40) {
             labels.shift()
             data.shift()
           }

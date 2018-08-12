@@ -7,3 +7,5 @@
     - setup:
   roles:
     - database
+    - platziverse-mqtt
+    - platziverse-api
