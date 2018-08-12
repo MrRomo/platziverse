@@ -1,6 +1,6 @@
 'use strict'
 
-import Vue from 'vue';
+const Vue = require('vue')
 const App = require('./app.vue')
 const Agent = require('./agent.vue')
 const Metric = require('./metric.vue')

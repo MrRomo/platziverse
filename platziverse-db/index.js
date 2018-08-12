@@ -1,5 +1,5 @@
 'use strict'
-
+require('longjohn')
 const setupDatabase = require('./lib/db')
 const setupAgentModel = require('./models/agent')
 const setupMetricModel = require('./models/metric')

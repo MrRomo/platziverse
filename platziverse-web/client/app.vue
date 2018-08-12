@@ -21,7 +21,9 @@
 <script>
 const request = require('request-promise-native')
 const io = require('socket.io-client')
+const { serverHost } = require('../config')
 const socket = io()
+
 module.exports = {
   data () {
     return {
@@ -30,16 +32,19 @@ module.exports = {
       socket
     }
   },
+
   mounted () {
     this.initialize()
   },
+
   methods: {
     async initialize () {
       const options = {
         method: 'GET',
-        url: 'http://localhost:8080/agents',
+        url: `${serverHost}/agents`,
         json: true
       }
+
       let result
       try {
         result = await request(options)
@@ -47,7 +52,9 @@ module.exports = {
         this.error = e.error.error
         return
       }
+
       this.agents = result
+
       socket.on('agent/connected', payload => {
         const { uuid } = payload.agent
         const existing = this.agents.find(a => a.uuid === uuid)
