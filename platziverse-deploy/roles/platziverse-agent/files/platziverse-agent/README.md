@@ -32,7 +32,7 @@ agent.on('connected', handler)
 agent.on('disconnected', handler)
 agent.on('message', handler)
 
-// Other Agents
+//Other Agents
 agent.on('agent/connected', handler)
 agent.on('agent/disconnected', handler)
 agent.on('agent/message', handler)

@@ -5,7 +5,10 @@ const PlatziverseAgent = require('../')
 const agent = new PlatziverseAgent({
   name: 'myapp',
   username: 'admin',
-  interval: 2000
+  interval: 2000,
+  mqtt: {
+    host: 'mqtt://api.ricardoromo.co'
+  }
 })
 
 agent.addMetric('rss', function getRss () {
@@ -13,7 +16,7 @@ agent.addMetric('rss', function getRss () {
 })
 
 agent.addMetric('promiseMetric', function getRandomPromise () {
-  return Promise.resolve(Math.random())
+  return Promise.resolve(Math.random()*20)
 })
 
 agent.addMetric('callbackMetric', function getRandomCallback (callback) {

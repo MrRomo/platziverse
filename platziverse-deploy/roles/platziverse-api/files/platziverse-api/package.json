@@ -1,8 +1,8 @@
 {
   "name": "platziverse-api",
   "version": "1.0.0",
-  "private": true,
-  "description": "A Simple IoT Platform - API",
+  "description": "A simple IoT platform -API",
+  "private": false,
   "main": "server.js",
   "scripts": {
     "test": "DEBUG=platziverse:* ava tests/ --verbose",
@@ -12,30 +12,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platzi/platziverse.git"
+    "url": "git+https://github.com/MrRomo/platziverse.git"
   },
-  "author": "Julian Duque <julianduquej@gmail.com>",
+  "author": "Ricardo <jricardoromo21@gmail.com> (https://twitter.com/JRicardo_Romo)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/platzi/platziverse/issues"
+    "url": "https://github.com/MrRomo/platziverse/issues"
   },
-  "homepage": "https://github.com/platzi/platziverse#readme",
+  "homepage": "https://github.com/MrRomo/platziverse#readme",
   "devDependencies": {
-    "ava": "^0.21.0",
-    "nodemon": "^1.11.0",
-    "proxyquire": "^1.8.0",
-    "sinon": "^3.1.0",
-    "standard": "^10.0.3",
-    "supertest": "^3.0.0"
+    "ava": "^0.25.0",
+    "nodemon": "^1.18.3",
+    "proxyquire": "^2.0.1",
+    "sinon": "^6.1.4",
+    "standard": "^11.0.1",
+    "supertest": "^3.1.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "debug": "^3.0.0",
-    "express": "^4.15.4",
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
     "express-asyncify": "^1.0.0",
-    "express-jwt": "^5.3.0",
-    "express-jwt-permissions": "^1.0.0",
-    "jsonwebtoken": "^7.4.2",
+    "express-jwt": "^5.3.1",
+    "express-jwt-permissions": "^1.2.1",
+    "jsonwebtoken": "^8.3.0",
     "platziverse-db": "file:../platziverse-db"
   }
 }
