@@ -62,6 +62,13 @@ module.exports = {
           this.agents.push(payload.agent)
         }
       })
+      socket.on('agent/disconnected', payload => {
+        const { uuid } = payload.agent
+        const existing = this.agents.find(a => a.uuid === uuid)
+        if (!existing) {
+          this.agents.push(payload.agent)
+        }
+      })
     }
   }
 }

@@ -4,6 +4,9 @@ After=network.target
 
 [Service]
 Environment=NODE_ENV=production
+Environment=API_ENDPOINT=http://api.ricardoromo.co
+Environment=SERVER_HOST=http://robotica.ricardoromo.co
+Environment=MQTT_HOST=mqtt://api.ricardoromo.co
 Type=simple
 User=root
 WorkingDirectory=/usr/local/src/platziverse-mqtt
